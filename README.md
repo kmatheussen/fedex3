@@ -3,7 +3,7 @@ Test code by annotation. Add tests like these:
 
 
 ```
-object TestObject{
+object ObjectToTestWith{
   @Test(code="""
      self.test("a") =/= "a22"
      self.test("a")  === "a_"
@@ -23,7 +23,7 @@ And then run all annotation tests in an object like this:
 
 ...
 
-  "Test by annotation the 'TestObject' object" in {
-     TestByAnnotation.testObject(TestObject)
+  "Test by annotation the 'ObjectToTestWith' object" in {
+     TestByAnnotation.TestObject(ObjectToTestWith)
   }
 ```
